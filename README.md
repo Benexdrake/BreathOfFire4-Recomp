@@ -10,14 +10,29 @@ Static recompilation of **BreathOfFire4** built on
 [psxrecomp](https://github.com/mstan/psxrecomp) and
 [recomp-ui](https://github.com/RetroPortingToolKit/recomp-ui).
 
-_Add a short pitch in catalog_identity.json / README._
+JRPG by Capcom (PlayStation, 2000), recompiled to run natively with modern enhancements.
 
 | | |
 |---|---|
 | Players | 1 |
-| Region | USA |
+| Region | Europe (SLES-03552) |
 | Publisher | - |
 | Year | - |
+
+## What is built in
+
+**Status: tested only at the very beginning.**
+
+- **16:9 widescreen** (3D game mode with screen-X culling hooks).
+- **60 fps** instead of PAL 50 Hz.
+
+Everything beyond the start of the game is untested; widescreen glitches may still exist.
+
+### Common to all recomps in this family
+
+- **60 fps:** PAL titles are forced to NTSC 60 Hz timing (`PSX_FORCE_60HZ=0` restores 50 Hz); the game runs ~20 % faster than on a PAL console.
+- **Faster loading:** CD speed-up and turbo while the memory card is being read.
+- **16:9** is provided by a trusted mod plugin (fixed display aspect 16:9) together with widescreen culling hooks; each feature can be switched off in `mods/state.toml`.
 
 Scaffolded with the New Project Layout. See
 `psxrecomp/docs/GAME_PROJECT_SETUP.md` for the full flow.
