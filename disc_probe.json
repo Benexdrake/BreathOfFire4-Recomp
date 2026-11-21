@@ -1,0 +1,29 @@
+{
+  "cue_path": "C:\\Discs\\BOF4\\Breath of Fire IV (Europe).cue",
+  "cue_name": "Breath of Fire IV (Europe).cue",
+  "bin_name": "Breath of Fire IV (Europe) (Track 1).bin",
+  "track_count": 2,
+  "data_track_size": 654246432,
+  "data_track_md5": "5e30fb4a490a7332f6f123dc30027f57",
+  "data_track_sha1": "065f6c1c85118294e2271097e49ded0f937db20f",
+  "data_track_crc32": "f0a5aa9d",
+  "boot_exe": "SLES_035.52",
+  "serial": "SLES-03552",
+  "serial_exe": "SLES_035.52",
+  "volume_id": "BOF4",
+  "display_name": "BreathOfFire4",
+  "load_address": "0x800F6000",
+  "entry_pc": "0x80136DA0",
+  "text_size": "0x00103000",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "a0b1a8afea19da9e54d4839ff9c7076482e6fb698a0afa0a63ab3cb10439ab53",
+  "boot_exe_sha256": "117d510dcbb90370d5cd0a65773673ea66dcb14eb69ad754587beb35ddc6ba10",
+  "seed_count": 617,
+  "warnings": [],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
