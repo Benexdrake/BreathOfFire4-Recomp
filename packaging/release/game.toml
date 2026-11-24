@@ -1,0 +1,85 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "BreathOfFire4"
+id = "SLES-03552"
+players = 1
+exe = "disc/SLES_035.52"
+load_address = "0x800F6000"
+entry_pc = "0x80136DA0"
+text_size = "0x00103000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Breath of Fire IV (Europe) (Track 1).bin"
+cue_name = "Breath of Fire IV (Europe).cue"
+boot_exe = "SLES_035.52"
+known_sizes = [654246432]
+known_md5 = [
+  "5e30fb4a490a7332f6f123dc30027f57",
+]
+known_sha1 = [
+  "065f6c1c85118294e2271097e49ded0f937db20f",
+]
+known_crc32 = [
+  "f0a5aa9d",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "BreathOfFire4 Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "16:9"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "a0b1a8afea19da9e54d4839ff9c7076482e6fb698a0afa0a63ab3cb10439ab53"
+
+[widescreen]
+gte_game_mode = true
+[widescreen.cull]
+auto_screen_x = true
+# Main-EXE sprite/tile screen-X rejects: (SX+16) < 352, each paired with a Y test (<272).
+screen_x_sites = [
+  "0x8014150C",  # sltiu SX+16 < 352
+  "0x80141544",  # sltiu SX+16 < 352
+  "0x8014157C",  # sltiu SX+16 < 352
+  "0x801415B4",  # sltiu SX+16 < 352
+  "0x801424E4",  # sltiu SX+16 < 352
+  "0x8014251C",  # sltiu SX+16 < 352
+  "0x80142554",  # sltiu SX+16 < 352
+  "0x8014258C",  # sltiu SX+16 < 352
+  "0x80143E50",  # sltiu SX+16 < 352
+  "0x80143E88",  # sltiu SX+16 < 352
+  "0x80143EC0",  # sltiu SX+16 < 352
+  "0x80143EF8",  # sltiu SX+16 < 352
+  "0x8014570C",  # sltiu SX+16 < 352
+  "0x80145744",  # sltiu SX+16 < 352
+  "0x8014577C",  # sltiu SX+16 < 352
+  "0x801457B4",  # sltiu SX+16 < 352
+  "0x801464BC",  # sltiu SX+16 < 352
+  "0x801464F4",  # sltiu SX+16 < 352
+  "0x8014652C",  # sltiu SX+16 < 352
+  "0x80146564",  # sltiu SX+16 < 352
+  "0x80146B74",  # sltiu SX+16 < 352
+  "0x80146BAC",  # sltiu SX+16 < 352
+  "0x80146BE4",  # sltiu SX+16 < 352
+  "0x80146C1C",  # sltiu SX+16 < 352
+]

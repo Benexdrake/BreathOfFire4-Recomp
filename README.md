@@ -1,9 +1,9 @@
 # BreathOfFire4
 
 <!-- retcomm-readme-metrics -->
-[![GitHub downloads (all assets, all releases)](https://img.shields.io/github/downloads/RetroPortingToolKit/bof4-recomp/total)](https://github.com/RetroPortingToolKit/bof4-recomp/releases)
-[![GitHub downloads (latest release)](https://img.shields.io/github/downloads/RetroPortingToolKit/bof4-recomp/latest/total)](https://github.com/RetroPortingToolKit/bof4-recomp/releases/latest)
-[![GitHub release](https://img.shields.io/github/v/release/RetroPortingToolKit/bof4-recomp)](https://github.com/RetroPortingToolKit/bof4-recomp/releases/latest)
+[![GitHub downloads (all assets, all releases)](https://img.shields.io/github/downloads/Benexdrake/BreathOfFire4-Recomp/total)](https://github.com/Benexdrake/BreathOfFire4-Recomp/releases)
+[![GitHub downloads (latest release)](https://img.shields.io/github/downloads/Benexdrake/BreathOfFire4-Recomp/latest/total)](https://github.com/Benexdrake/BreathOfFire4-Recomp/releases/latest)
+[![GitHub release](https://img.shields.io/github/v/release/Benexdrake/BreathOfFire4-Recomp)](https://github.com/Benexdrake/BreathOfFire4-Recomp/releases/latest)
 <!-- /retcomm-readme-metrics -->
 
 Static recompilation of **BreathOfFire4** built on
@@ -19,6 +19,12 @@ JRPG by Capcom (PlayStation, 2000), recompiled to run natively with modern enhan
 | Publisher | - |
 | Year | - |
 
+## Download
+
+Get the latest build from the [Releases page](https://github.com/Benexdrake/BreathOfFire4-Recomp/releases/latest) (Windows x64: unzip, start `BreathOfFire4.exe`).
+
+No game data is included. You need your own copy of the European disc (SLES-03552) as bin/cue; see [DISC.md](DISC.md).
+
 ## What is built in
 
 **Status: tested only at the very beginning.**
@@ -31,7 +37,6 @@ Everything beyond the start of the game is untested; widescreen glitches may sti
 ### Common to all recomps in this family
 
 - **60 fps:** PAL titles are forced to NTSC 60 Hz timing (`PSX_FORCE_60HZ=0` restores 50 Hz); the game runs ~20 % faster than on a PAL console.
-- **Faster loading:** CD speed-up and turbo while the memory card is being read.
 - **16:9** is provided by a trusted mod plugin (fixed display aspect 16:9) together with widescreen culling hooks; each feature can be switched off in `mods/state.toml`.
 
 Scaffolded with the New Project Layout. See
